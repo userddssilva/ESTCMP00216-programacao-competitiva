@@ -24,10 +24,6 @@ int dijkstra() {
             continue;
         }
         processed[u] = 1;
-
-		for (int i = 1; i < adj[u].size(); i++)
-			int v = adj[u].first();
-			int
         for (auto [v, w] : adj[u]) {
             if (dist[u] + w < dist[v]) {
                 dist[v] = dist[u] + w;
