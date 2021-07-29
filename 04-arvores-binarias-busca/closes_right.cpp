@@ -6,15 +6,11 @@ typedef long long ll;
 
 vector <ll> a;
 
-int p(ll idx, ll x){
-    return x <= a[idx];
-}
-
 int bsearch(ll lo, ll hi, ll x){
     ll md;
     while(lo < hi){
         md = lo + (hi-lo)/2;
-        if(p(md, x)) hi = md;
+        if(a[md] <= x) hi = md;
         else lo = md + 1;
     }
     return lo; 
