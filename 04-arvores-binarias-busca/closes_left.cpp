@@ -6,7 +6,7 @@ typedef long long ll;
 vector <ll> a;
 
 
-ll busca_binaria(ll lo, ll hi, ll x){
+ll bsearch(ll lo, ll hi, ll x){
     ll md;
     while(lo < hi){
         md = lo + (hi-lo)/2;
@@ -25,7 +25,7 @@ int main(){
     }
     for(int i = 0; i < k; i++){
         cin >> ki;
-        ic = busca_binaria(0, n, ki);
+        ic = bsearch(0, n, ki);
         cout << ic << endl;
     }
     return 0;
